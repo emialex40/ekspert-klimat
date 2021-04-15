@@ -1,0 +1,163 @@
+//global
+.faq_page {
+  padding-bottom: 50px;
+  .row > div:last-child  {
+    padding-left: 0;
+    @include _media-sm() {
+      padding-left: 15px;
+    }
+  }
+   .front_page_title {
+     @include _media-xs() {
+       padding: 10px 0;
+     }
+   }
+  //TABS
+  #tabs {
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  .tabs-nav {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    padding: 40px 0;
+    border: 1px solid darken($brand-minor, 5%);
+    border-radius: 20px;
+    @include _media-sm() {
+      border-radius: 20px 20px 0 0;
+    }
+
+  }
+  .tabs-nav:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .tabs-nav li {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .tabs-nav a {
+    display: block;
+    padding: 0 50px;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: $base;
+    text-decoration: none;
+    color: $grey80;
+    font-weight: 500;
+    &:hover {
+      color: $brand-red;
+    }
+    @include _media-md() {
+      line-height: 1.2;
+      height: auto;
+      padding-top: 13px;
+      padding-bottom: 12px;
+    }
+  }
+
+  .tabs-nav a.active {
+    position: relative;
+    color: $brand-minor;
+    &:before {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      content: ' ';
+      height: 100%;
+      width: 3px;
+      border-radius: 5px;
+      background-color: $brand-minor;
+      box-shadow: 0px 0px 7px $brand-minor;
+    }
+  }
+  .tabs-items {
+    margin-left: 0;
+    background: #fff;
+    padding: 0;
+    border: 1px solid darken($brand-minor, 5%);
+    border-radius: 20px;
+    @include _media-sm() {
+      border-radius: 0 0 20px 20px;
+    }
+  }
+  .tabs-item {
+
+  }
+  //Аккордион
+  .accordion .accordion-item {
+    margin: 0;
+    padding: 30px 40px;
+    transition: 0.3s all;
+    &:not(:last-child) {
+      border-bottom: 1px solid darken($brand-minor, 5%);
+    }
+  }
+  .accordion .ui-accordion-header {
+    line-height: 1.2;
+    margin: 0;
+    padding: 10px 0;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: $base;
+    text-decoration: none;
+    color: $grey80;
+    font-weight: 500;
+    transition: 0.3s all;
+    &.ui-accordion-header-active {
+      color: $brand-minor;
+    }
+    &:hover {
+      color: $brand-red;
+    }
+    @include _media-sm() {
+      position: relative;
+    }
+  }
+  .accordion .ui-accordion-header:after {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    width: 16px;
+    position: relative;
+    top: -4px;
+    height: 16px;
+    content: '\f078';
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    transition: 0.3s;
+    @include _media-sm() {
+      position: absolute;
+      right: -25px;
+      top: 8px;
+    }
+  }
+  .accordion .ui-state-active:after {
+    transform: rotate(180deg);
+    top: 0px;
+    @include _media-sm() {
+      position: absolute;
+      top: 12px;
+    }
+  }
+  .accordion .ui-accordion-content {
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #444;
+  }
+}
+

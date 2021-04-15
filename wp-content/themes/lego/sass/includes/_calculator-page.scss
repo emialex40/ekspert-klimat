@@ -1,0 +1,210 @@
+//global
+.calculator_page {
+   .front_page_title {
+     @include _media-xs() {
+       padding: 10px 0;
+     }
+   }
+}
+// TABS
+#calculator_tabs {
+  margin: 10px 0;
+
+}
+.calculator_tabs-nav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $brand-major;
+  -webkit-border-radius: 25px 25px 0 0 ;
+  -moz-border-radius: 25px 25px 0 0 ;
+  border-radius: 25px 25px 0 0 ;
+  box-shadow: 0 0 2px rgba(0,0,0,0.7);
+  @include _media-sm() {
+    height: 80px;
+    flex-wrap: wrap;
+  }
+  @include _media-xxxs() {
+    height: 90px;
+  }
+}
+.calculator_tabs-nav li {
+  display: table-cell;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.calculator_tabs-nav a, .calculator_tabs-nav li {
+  display: block;
+  padding: 0 20px;
+  background: transparent;
+  color: $grey20;
+  //font-size: $base_small;
+  font-size: $h4;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  height: 60px;
+  line-height: 60px;
+  /*&:hover, &:focus {
+    color: $brand-red;
+  }*/
+  @include _media-sm() {
+    height: auto;
+    line-height: 1;
+  }
+}
+.calculator_tabs-nav li:first-child a {
+  
+}
+.calculator_tabs-nav li:last-child a {
+
+}
+.calculator_tabs-nav a.active {
+  border-bottom: 3px solid white;
+  color: white;
+  padding: 0 20px;
+}
+.calculator_tabs-items {
+    border-radius: 0 0 25px 25px;
+  background: transparent;
+  height: 550px;
+  width: 100%;
+  position: relative;
+  font-weight: 500;
+  box-shadow: 0 0 2px rgba(0,0,0,0.7);
+  @include _media-xl() {
+    height: 460px;
+  }
+  @include _media-sm() {
+    height: 530px;
+  }
+  @include _media-xs() {
+    height: 570px;
+  }
+  @include _media-xs() {
+    height: 600px;
+  }
+}
+.calculator_tabs-item {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 25px 25px;
+}
+.calculator_container {
+  width: 65%;
+  border-radius: 25px;
+  background-color: $white;
+  padding: 35px 25px;
+  height: auto;
+  @include _media-lg() {
+    width: 80%;
+  }
+  @include _media-sm() {
+    width: 60%;
+  }
+  @include _media-xs() {
+    width: 90%;
+  }
+  @include _media-xs() {
+    padding:20px 15px;
+  }
+}
+//calculator
+
+// ТАБ 1
+.air_conditioner_power {
+  .calculator_container {
+    text-align: center;
+  }
+  .calculator_title {
+    font-weight: 400;
+    text-shadow: 0 1px 3px #fff;
+    line-height: 1;
+    font-size: $h2-xl;
+    @include _media-xs() {
+      font-size: $h2-xxs;
+    }
+  }
+  .calculator_content {
+    padding-bottom: 20px;
+  }
+  .air_conditioner_power_calculator_table {
+    padding: 40px 0 30px;
+    @include _media-sm() {
+      padding: 10px 0 10px;
+    }
+  }
+  .air_conditioner_power_calculator_string {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include _media-sm() {
+      display: block;
+    }
+  }
+   .calculator_parameter_header    {
+     font-size: $base;
+     @include _media-sm() {
+       display: block;
+       padding-bottom: 12px;
+     }
+     @include _media-xs() {
+       padding-bottom: 5px;
+       line-height: 1;
+       font-size: $base-sm;
+     }
+   }
+   .calculator_parameter_input, .calculator_parameter_input_select {
+     width: 220px;
+     padding: 5px 10px;
+     height: 35px;
+     text-align: center;
+     border: none;
+     border-radius: 50px;
+     display: block;
+     margin: 0;
+     background-color: $grey20;
+     color: $grey80;
+     @include _media-sm() {
+       margin: 0 auto;
+     }
+     @include _media-xs() {
+       width: 80%;
+     }
+     @include _media-xxs() {
+       width: 100%;
+     }
+   }
+  .calculator_parameter_input {
+    &::placeholder {
+      color: lighten($grey80, 40%);
+    }
+  }
+}
+.popup_condText {
+  max-width: 650px;
+  border-radius: 25px;
+  .link_button_sm {
+    &:focus {
+      color: $white;
+      background: $brand-red;;
+    }
+    &:hover, &:active {
+      color: $grey30;
+      background: $brand-red-h;
+    }
+  }
+}

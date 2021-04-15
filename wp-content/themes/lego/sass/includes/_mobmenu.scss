@@ -1,0 +1,124 @@
+.mobile_menu {
+  position: fixed;
+  width: 80%;
+  min-width: 270px;
+  background-color:$grey30;  
+  z-index: 1010;
+  top: 0;
+  overflow-y: auto;
+  bottom: 0;
+  left: -4000px;
+  -webkit-transition: left ease 250ms;
+  -o-transition: left ease 250ms;
+  transition: left ease 250ms;	
+	    
+  &.active {
+    display: block;
+    left: 0;
+    -webkit-transition: left ease 250ms;
+    -o-transition: left ease 250ms;
+    transition: left ease 250ms;
+    
+  }
+}
+
+.header_menu_mob {
+	padding-top: 85px;
+	padding-left: 60px;
+  li {
+    position: relative;
+      font-size: 18px;
+	  line-height: 2;
+	  a {
+	    display: inline-block;
+        color: $black;   	
+	  }
+span {display: none;}  
+	  .items {	     
+	    position: relative;	    
+	  }
+	  &.current-menu-item,&.current-menu-parent,&.current-menu-ancestor {
+	  }
+	&.menu-item-has-children {
+	  > .items {
+	    padding-right: 30px;
+	  }
+	} 
+ 
+  }
+  
+  
+  ul {
+	li {
+		font-size: 16px;
+		line-height: 2;
+		padding-left: 10px;
+	  a {
+          color: $black;   	
+	  }	
+
+	  span {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+          color: $black; 
+		-webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+		i:before {
+		  content: '\f104';  font-family: "Font Awesome 5 Pro"; font-weight: 300; display:inline-block;font-style:normal;font-variant:normal;
+	    }
+	  }
+     &.current-menu-item,&.current-menu-parent,&.current-menu-ancestor {
+          a { color: $black; }
+          span { color: $black; }
+		ul {
+
+		  li {
+			  a {
+				 
+          color: $black;   
+			  }
+			  &.current-menu-item {
+          a { color: $black; }}
+		  }
+		}	  
+    }
+    &.menu-item-has-children {
+	    > .items {
+	      padding-right: 30px;
+		}
+	  }	
+
+	      span.active {
+		    i:before {
+		      content: '\f107';  font-family: "Font Awesome 5 Pro"; font-weight: 300; display:inline-block;font-style:normal;font-variant:normal;
+	        }
+	      }	
+  }  
+  }
+  ul ul {  
+		li {
+			display: none;
+      font-size: 18px; 	
+		a {
+			
+          color: $black;   	
+		} 
+		 &.current-menu-item {
+          a { color: $black; }}
+		}
+	}
+}
+.header_menu_mob li ul {display:none;}
+.header_menu_mob li ul li ul {display:none;}
+.header_menu_mob li.current-menu-item ul,.header_menu_mob li.current-menu-ancestor ul, .header_menu_mob li.current-menu-parent ul, .header_menu_mob li.focus ul {display:block;}
+.header_menu_mob li.current-menu-item ul li ul,.header_menu_mob li.current-menu-ancestor ul li ul, .header_menu_mob li.current-menu-parent ul li ul, .header_menu_mob li.focus ul li ul {display:none;}
+.header_menu_mob li ul li.current-menu-item ul,.header_menu_mob li ul li.current-menu-parent ul,.header_menu_mob li ul li.focus ul{display:block;}
+
+
+
+

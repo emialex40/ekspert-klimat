@@ -1,0 +1,51 @@
+/*Страница избранное*/
+.tinv-wishlist {
+  &  *{
+    font-family:$font-base;
+    font-weight: 500;
+  }
+  .tinv-header h2 {
+    padding-top: 40px;
+    text-align: center;
+    color: $black;
+    font-family:$font-base;
+    font-weight: 600;
+  }
+  table.tinvwl-table-manage-list {
+    text-align: left;
+  }
+  tbody .wishlist_item {
+    &:nth-child(2n+1) {
+      background-color: $grey20;
+    }
+  }
+  /*Крестик убрать товар */
+  .product-remove {
+    display: none;
+    button {
+      padding-left: 0px;
+      &:hover, &:focus {
+        background-color: $brand-major;
+        color: $white;
+      }
+   }
+  }
+  .product-name {
+    font-size: 16px;
+  }
+  .product-action {
+    button {
+      min-width: 150px;
+    }
+  }
+  select {
+    cursor: pointer;
+    background: $grey20;
+    color: $black;
+    padding: 5px!important;
+    width: auto;
+    border-radius: 20px;
+    height: 40px!important;
+    margin-right: 5px;
+  }
+}

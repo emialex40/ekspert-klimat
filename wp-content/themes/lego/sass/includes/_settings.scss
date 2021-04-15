@@ -1,0 +1,81 @@
+/* color */
+$black: #000000 !default;
+$brand-red: #f34b40 !default;
+$brand-red-h: darken($brand-red,20%);
+$grey30: #e5e5e5 !default;
+$grey20: #ededed !default;
+$brand-major: #1f2349 !default;
+$brand-minor: #070b6d !default;
+$white: #ffffff !default;
+$grey80: #565656 !default;
+
+$price_sale: #FF5757;
+$price_old: #B4B4B4;
+
+/* font-family */
+$font-base: 'Montserrat', sans-serif !default;
+
+
+/* font-size */
+/* h1 */
+$h1: 55px !default;
+$h1-xl: 55px !default;
+$h1-lg: 52px !default;
+$h1-md: 48px !default;
+$h1-sm: 36px !default;
+$h1-xs: 28px !default;
+/* h2 */
+$h2: 36px !default;
+$h2-xl: 30px !default;
+$h2-lg: 28px !default;
+$h2-md: 28px !default;
+$h2-sm: 28px !default;
+$h2-xs: 28px !default;
+$h2-xxs: 24px !default;
+/* h3 */
+$h3: 36px !default;
+$h3-xl: 36px !default;
+$h3-lg: 36px !default;
+$h3-md: 36px !default;
+$h3-sm: 28px !default;
+$h3-xs: 22px !default;
+/* h4 */
+$h4: 24px !default;
+$h4-xl: 24px !default;
+$h4-lg: 21px !default;
+$h4-md: 21px !default;
+$h4-sm: 18px !default;
+$h4-xs: 18px !default;
+/* h5 */
+$h5: 18px !default;
+$h5-xl: 18px !default;
+$h5-lg: 18px !default;
+$h5-md: 18px !default;
+$h5-sm: 16px !default;
+$h5-xs: 16px !default;
+/* h6 */
+$h6: 20px !default;
+$h6-xl: 20px !default;
+$h6-lg: 20px !default;
+$h6-md: 20px !default;
+$h6-sm: 18px !default;
+$h6-xs: 18px !default;
+/* p */
+$base: 18px !default;
+$base-xl: 18px !default;
+$base-lg: 18px !default;
+$base-md: 16px !default;
+$base-sm: 16px !default;
+$base-xs: 14px !default;
+/* p small*/
+$base_small: 16px !default;
+$base_small_md: 14px !default;
+
+$screen-xl: 1367px !default;
+$screen-lg: 1199px !default;
+$screen-md: 991px !default;
+$screen-sm: 768px !default;
+$screen-xs: 575px !default;
+$screen-xxs: 480px !default;
+$screen-xxxs: 400px !default;
+	

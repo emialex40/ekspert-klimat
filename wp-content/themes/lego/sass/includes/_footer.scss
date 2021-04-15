@@ -1,0 +1,184 @@
+.height_100 {
+  height: 100%;
+}
+.hide_1360 {
+  @include _media-xl() {
+    display: none;
+  }
+}
+.hide_1200 {
+  @include _media-lg() {
+    display: none;
+  }
+}
+.hide_992 {
+  @include _media-md() {
+    display: none;
+  }
+}
+.hide_768 {
+  @include _media-sm() {
+    display: none;
+  }
+}
+.hide_576 {
+  @include _media-xs() {
+    display: none;
+  }
+}
+footer {
+  background: $grey80;
+  a, a  h4 {color:$grey20;
+    &:hover {color:$brand-minor;}}
+}
+.footer_section {padding: 55px 0; color:$grey20;
+  @include _media-xl() {padding: 25px 0;}
+  @include _media-sm() {
+    padding: 10px 0 5px 0;
+  }
+  .row {position: relative;}
+}
+
+.footer_menu_block {
+  // Для соц иконок
+  padding-bottom: 40px;
+  @include _media-sm() {
+    padding-bottom: 0;
+  }
+}
+.footer_title {padding-bottom: 20px;
+  @include _media-xl(){font-size: 20px;padding-bottom: 10px}
+  @include _media-sm() {
+  font-size: $base-lg;
+    padding-bottom: 5px;
+}
+}
+
+.footer_menu_list {color:$grey20;
+  a {font-size: $base;
+    display: block;
+    line-height: 3;
+    @include _media-xl() {
+      font-size: $base_small_md;line-height: 2;
+    }
+  }
+}
+
+div.footer_contact_block {
+  position: relative;
+  display: flex;
+  height: 100%;
+  @include _media-sm() {
+    display: block;
+    height: 33px;
+    .container {
+      display: none;
+    }
+  }
+  &::before  {
+    position: absolute;
+    content: ' ';
+    border-left: 2px solid lighten($grey80, 20%);
+    height: 90%;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    @include _media-sm() {
+      border-left: none;
+    }
+  }
+  .footer_social_list li  {
+    margin-left: -10px;
+    padding-top: 45px;
+    @include _media-xl() {
+      padding-top: 15px;
+    }
+    @include _media-lg() {
+      padding-top: 25px;
+    }
+  a {color:$grey20;
+    font-size: $h4;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    @include _media-xl() {
+      font-size: $base_small;
+    }
+    @include _media-lg() {
+      font-size: $base-lg;
+    }
+
+    i {
+      padding-right: 15px;
+      font-size: 44px;
+      width: 80px;
+      text-align: center;
+      &.fa-flip-horizontal {padding-left: 15px;padding-right:0;}
+      @include _media-xl() {
+        font-size: 30px;
+        width: 45px;
+      }
+      @include _media-lg() {
+        font-size: 30px;
+      }
+    }
+  &:hover {color:$brand-minor;}
+  }
+  }
+  .container {width: auto;padding: 0 0 5px 0;}
+  h4+a{padding-top: 15px;}
+}
+
+.footer_phone {}
+.footer_email {}
+.footer_address {}
+
+// Соц иконки
+.footer_social_block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include _media-sm() {
+    bottom: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+  }
+  a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+    img {
+      @include _media-sm() {
+        max-width: 28px;
+      }
+    }
+    @include _media-sm() {
+      margin-right: 0;
+      display: block;
+      margin: 7px 0;
+    }
+  }
+  #icon-vk { }
+  #icon-instagram {}
+}
+.copyright_block {
+  border-top: 2px solid lighten($grey80, 20%);
+  text-align: center;
+  padding:0;
+  p {
+    font-size: 12px;}
+  i {
+    padding-right: 5px;
+    display: inline-block;
+  }
+}
+#call-back-popup .link_button_sm  {
+  line-height: 100%;
+  padding: 0 25px;
+  text-align: center;
+}
